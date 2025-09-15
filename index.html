@@ -1,161 +1,287 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
-  </style>
+
+    
+
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+
+    <title>Buckshot Roulette</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link id="-gd-engine-icon" rel="icon" type="image/png" href="buckshot-roulette.icon.png" />
+
+    <link rel="apple-touch-icon" href="buckshot-roulette.apple-touch-icon.png" />
+
 </head>
+
+
+
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="utf-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Buckshot Roulette&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="style.css"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link id="-gd-engine-icon" rel="icon" type="image/png" href="buckshot-roulette.icon.png" /&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;link rel="apple-touch-icon" href="buckshot-roulette.apple-touch-icon.png" /&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="main.js"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="loading-text" style="color: white; font-family: cursive; font-size: 48px; text-align: center; margin-top: 20px;"&gt;LOADING...&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;canvas id="canvas"&gt; Your browser does not support the canvas tag. &lt;/canvas&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;noscript&gt; Your browser does not support JavaScript. &lt;/noscript&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div id="status"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="buckshot-roulette.png" alt=""&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;progress id="status-progress"&gt;&lt;/progress&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="status-notice"&gt;&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="buckshot-roulette.js"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const GODOT_CONFIG = {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"args": [],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"canvasResizePolicy": 2,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"ensureCrossOriginIsolationHeaders": false,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"executable": "buckshot-roulette",</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"experimentalVK": false,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"fileSizes": {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>"buckshot-roulette.pck": 344705792,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>"buckshot-roulette.wasm": 43444261</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"focusCanvas": false,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"gdextensionLibs": []</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const GODOT_THREADS_ENABLED = false;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const engine = new Engine(GODOT_CONFIG);</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function run() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const loadingText = document.getElementById('loading-text');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const statusOverlay = document.getElementById('status');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const statusProgress = document.getElementById('status-progress');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const statusNotice = document.getElementById('status-notice');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>loadingText.remove();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>let initializing = true;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>let statusMode = '';</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function setStatusMode(mode) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (statusMode === mode || !initializing) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>return;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (mode === 'hidden') {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusOverlay.remove();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>initializing = false;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>return;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>statusOverlay.style.visibility = 'visible';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>statusProgress.style.display = mode === 'progress' ? 'block' : 'none';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>statusNotice.style.display = mode === 'notice' ? 'block' : 'none';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>statusMode = mode;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function setStatusNotice(text) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>while (statusNotice.lastChild) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusNotice.removeChild(statusNotice.lastChild);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const lines = text.split('\n');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>lines.forEach((line) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusNotice.appendChild(document.createTextNode(line));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>statusNotice.appendChild(document.createElement('br'));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function displayFailureNotice(err) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error(err);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (err instanceof Error) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>setStatusNotice(err.message);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else if (typeof err === 'string') {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>setStatusNotice(err);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>setStatusNotice('An unknown error occurred.');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>setStatusMode('notice');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>initializing = false;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const missing = Engine.getMissingFeatures({</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>threads: GODOT_THREADS_ENABLED,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (missing.length !== 0) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (GODOT_CONFIG['serviceWorker'] &amp;&amp; GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] &amp;&amp; 'serviceWorker' in navigator) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>let serviceWorkerRegistrationPromise;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>try {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>} catch (err) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>// There's a chance that installing the service worker would fix the issue</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>Promise.race([</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>serviceWorkerRegistrationPromise.then((registration) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>if (registration != null) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>return Promise.reject(new Error('Service worker already exists.'));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>return registration;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}).then(() =&gt; engine.installServiceWorker()),</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// For some reason, `getRegistration()` can stall</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>new Promise((resolve) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>setTimeout(() =&gt; resolve(), 2000);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}),</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>]).then(() =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>// Reload if there was no error.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>window.location.reload();</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}).catch((err) =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>console.error('Error while registering service worker:', err);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>// Display the message as usual</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>displayFailureNotice(missingMsg + missing.join('\n'));</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>setStatusMode('progress');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>engine.startGame({</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>'onProgress': function (current, total) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>if (current &gt; 0 &amp;&amp; total &gt; 0) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>statusProgress.value = current;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>statusProgress.max = total;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>} else {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>statusProgress.removeAttribute('value');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>statusProgress.removeAttribute('max');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}).then(() =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>setStatusMode('hidden');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}, displayFailureNotice);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.godotRunStart = run;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+    <script src="main.js"></script>
+
+    <div id="loading-text" style="color: white; font-family: cursive; font-size: 48px; text-align: center; margin-top: 20px;">LOADING...</div>
+
+    <canvas id="canvas"> Your browser does not support the canvas tag. </canvas>
+
+    <noscript> Your browser does not support JavaScript. </noscript>
+
+    <div id="status">
+
+        <img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="buckshot-roulette.png" alt="">
+
+        <progress id="status-progress"></progress>
+
+        <div id="status-notice"></div>
+
+    </div>
+
+    <script src="buckshot-roulette.js"></script>
+
+    <script>
+
+        const GODOT_CONFIG = {
+
+            "args": [],
+
+            "canvasResizePolicy": 2,
+
+            "ensureCrossOriginIsolationHeaders": false,
+
+            "executable": "buckshot-roulette",
+
+            "experimentalVK": false,
+
+            "fileSizes": {
+
+                "buckshot-roulette.pck": 344705792,
+
+                "buckshot-roulette.wasm": 43444261
+
+            },
+
+            "focusCanvas": false,
+
+            "gdextensionLibs": []
+
+        };
+
+        const GODOT_THREADS_ENABLED = false;
+
+        const engine = new Engine(GODOT_CONFIG);
+
+
+
+        function run() {
+
+            const loadingText = document.getElementById('loading-text');
+
+            const statusOverlay = document.getElementById('status');
+
+            const statusProgress = document.getElementById('status-progress');
+
+            const statusNotice = document.getElementById('status-notice');
+
+            loadingText.remove();
+
+            let initializing = true;
+
+            let statusMode = '';
+
+
+
+            function setStatusMode(mode) {
+
+                if (statusMode === mode || !initializing) {
+
+                    return;
+
+                }
+
+                if (mode === 'hidden') {
+
+                    statusOverlay.remove();
+
+                    initializing = false;
+
+                    return;
+
+                }
+
+                statusOverlay.style.visibility = 'visible';
+
+                statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+
+                statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
+
+                statusMode = mode;
+
+            }
+
+
+
+            function setStatusNotice(text) {
+
+                while (statusNotice.lastChild) {
+
+                    statusNotice.removeChild(statusNotice.lastChild);
+
+                }
+
+                const lines = text.split('\n');
+
+                lines.forEach((line) => {
+
+                    statusNotice.appendChild(document.createTextNode(line));
+
+                    statusNotice.appendChild(document.createElement('br'));
+
+                });
+
+            }
+
+
+
+            function displayFailureNotice(err) {
+
+                console.error(err);
+
+                if (err instanceof Error) {
+
+                    setStatusNotice(err.message);
+
+                } else if (typeof err === 'string') {
+
+                    setStatusNotice(err);
+
+                } else {
+
+                    setStatusNotice('An unknown error occurred.');
+
+                }
+
+                setStatusMode('notice');
+
+                initializing = false;
+
+            }
+
+            const missing = Engine.getMissingFeatures({
+
+                threads: GODOT_THREADS_ENABLED,
+
+            });
+
+            if (missing.length !== 0) {
+
+                if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
+
+                    let serviceWorkerRegistrationPromise;
+
+                    try {
+
+                        serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
+
+                    } catch (err) {
+
+                        serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
+
+                    }
+
+                    // There's a chance that installing the service worker would fix the issue
+
+                    Promise.race([
+
+                        serviceWorkerRegistrationPromise.then((registration) => {
+
+                            if (registration != null) {
+
+                                return Promise.reject(new Error('Service worker already exists.'));
+
+                            }
+
+                            return registration;
+
+                        }).then(() => engine.installServiceWorker()),
+
+                        // For some reason, `getRegistration()` can stall
+
+                        new Promise((resolve) => {
+
+                            setTimeout(() => resolve(), 2000);
+
+                        }),
+
+                    ]).then(() => {
+
+                        // Reload if there was no error.
+
+                        window.location.reload();
+
+                    }).catch((err) => {
+
+                        console.error('Error while registering service worker:', err);
+
+                    });
+
+                } else {
+
+                    // Display the message as usual
+
+                    const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
+
+                    displayFailureNotice(missingMsg + missing.join('\n'));
+
+                }
+
+            } else {
+
+                setStatusMode('progress');
+
+                engine.startGame({
+
+                    'onProgress': function (current, total) {
+
+                        if (current > 0 && total > 0) {
+
+                            statusProgress.value = current;
+
+                            statusProgress.max = total;
+
+                        } else {
+
+                            statusProgress.removeAttribute('value');
+
+                            statusProgress.removeAttribute('max');
+
+                        }
+
+                    },
+
+                }).then(() => {
+
+                    setStatusMode('hidden');
+
+                }, displayFailureNotice);
+
+            }
+
+        };
+
+        window.godotRunStart = run;
+
+    </script>
+
 </body>
+
+
+
 </html>
